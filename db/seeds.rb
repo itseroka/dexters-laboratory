@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+# db/seeds.rb
+Category.create(name: 'Offtopic')
+Category.create(name: 'Development')
+Category.create(name: 'Test')

@@ -1,0 +1,5 @@
+<div id=categories">
+  <% Category.all.each do |category| %>
+      <%= link_to category.name, category %>
+        <% end %>
+</div>
