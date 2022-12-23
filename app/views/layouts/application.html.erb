@@ -11,6 +11,8 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= favicon_link_tag asset_path('dex.png') %>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </head>
 
   <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
@@ -94,27 +96,29 @@
 
 
   <div class="column">
-    <div class="box">
-      <section class="section">
+
+
       <div class="content">
         <%= yield %>
       </div>
-    </section>
+
     </div>
   </div>
-</div>
 
 </div>
+
 </body>
+
 <br />
 <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-    </p>
-  </div>
+    <div class="columns is-centered">
+      <a href="mailto:it.seroka@gmail.com"><ion-icon name="mail-open-outline" size="large"></ion-icon></a>
+      <a href="https://github.com/itseroka" target="_blank"><ion-icon name="logo-github" size="large"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/mateusz-seroka-31b756247/?trk=profile-badge&originalSubdomain=pl" target="_blank"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+    </div>
+       <div class="columns is-centered">
+         © 2023 Copyright: <a href="https://google.pl" target="_blank">Dexter</a>
+       </div>
 </footer>
 
 </html>
