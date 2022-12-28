@@ -3,35 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Dexter laboratory</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= favicon_link_tag asset_path('dex.png') %>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </head>
 
   <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/posts/">
-    <%= image_tag ("dex.png") %>
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
+    <a class="navbar-item" href="/posts/"><%= image_tag ("dex.png") %></a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+<div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item" href="/posts/">Blog</a>
-
       <a class="navbar-item" href="/categories/">Categories</a>
-
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More
@@ -71,53 +64,47 @@
 </nav>
 
 <body>
-<div class="column is-4 is-offset-8">
-<%= render 'search/form' %></div>
-</div>
-
-<div class="container">
-
-<div class="columns">
-  <div class="column is-one-fifth">
-  <div class="panel is-dark">
-  <p class="panel-heading">
-    Categories
-  </p>
-
-  <aside class="menu">
-    <ul class="menu-list">
-      <li>
-        <%= render "categories/list_category" %>
-      </li>
-    </ul>
-  </aside>  
-</div>
+  <div class="column is-4 is-offset-8">
+    <%= render 'search/form' %></div>
   </div>
 
+  <div class="container">
+   <div class="columns">
+      <div class="column is-one-fifth">
+       <div class="panel is-dark">
+        <p class="panel-heading">Categories</p>
+          <aside class="menu">
+           <ul class="menu-list">
+             <li>
+               <%= render "categories/list_category" %>
+             </li>
+            </ul>
+           </aside>  
+      </div>
+    </div>
+    
 
   <div class="column">
-
-
-      <div class="content">
-        <%= yield %>
-      </div>
-
+    <div class="content">
+      <%= yield %>
     </div>
   </div>
 
+</div>
 </div>
 
 </body>
 
 <br />
+
 <footer class="footer">
     <div class="columns is-centered">
-      <a href="mailto:it.seroka@gmail.com"><ion-icon name="mail-open-outline" size="large"></ion-icon></a>
-      <a href="https://github.com/itseroka" target="_blank"><ion-icon name="logo-github" size="large"></ion-icon></a>
-      <a href="https://www.linkedin.com/in/mateusz-seroka-31b756247/?trk=profile-badge&originalSubdomain=pl" target="_blank"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
-    </div>
+      <a href="mailto:it.seroka@gmail.com"><ion-icon name="mail-open-outline" size="large" class="has-text-grey-darker"></ion-icon></a>
+      <a href="https://github.com/itseroka" target="_blank"><ion-icon name="logo-github" size="large" class="has-text-grey-darker"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/mateusz-seroka-31b756247/?trk=profile-badge&originalSubdomain=pl" target="_blank"><ion-icon name="logo-linkedin" size="large" class="has-text-grey-darker"></ion-icon></a>
+      </div>
        <div class="columns is-centered">
-         © 2023 Copyright: <a href="https://google.pl" target="_blank">Dexter</a>
+         © 2023 Copyright: <a href="https://google.pl" target="_blank" class="has-text-grey-darker">Dexter</a>
        </div>
 </footer>
 

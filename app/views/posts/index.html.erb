@@ -9,11 +9,15 @@
     <div class="box">
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= button_to "Show this post", post, method: :get, type: :button, class: "button is-black" %>
     </p>
     </div>
   <% end %>
 </div>
+<br />
 
-<%= link_to "New post", new_post_path %>
-
+<div class="column">
+  <div class="content">
+  <%= button_to "New post", new_post_path, method: :get, type: :button, class: "button is-black" %>
+  </div>
+</div>
