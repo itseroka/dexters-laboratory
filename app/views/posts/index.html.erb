@@ -16,8 +16,10 @@
 </div>
 <br />
 
+<% if user_signed_in? %>
 <div class="column">
   <div class="content">
   <%= button_to "New post", new_post_path, method: :get, type: :button, class: "button is-black" %>
   </div>
 </div>
+<% end %>
