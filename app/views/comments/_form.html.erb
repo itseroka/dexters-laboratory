@@ -1,18 +1,20 @@
 <%= form_with(model: [@post, @post.comments.new], local: true) do |form| %>
 
     <div class="field">
+    <strong>
     <%= form.label :author %>
+    </strong>
     <br />
     <%= form.text_field :author %>
     </div>
 
     <div class="field">
-    <%= form.label :body %>
-    <br />
-    <%= form.text_area :body %>
+    <%= form.rich_text_area :body %>
     </div>
-    <br />
-    <div class="action">
-	<%= form.submit %>
+
+    <div class="buttons">
+	<%= form.submit "Create comment", class: "button is-small" %>
     </div>
+
 <% end %>
+

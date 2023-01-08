@@ -1,15 +1,15 @@
 
 <%= notice %>
 
-<h1>Hidden programming laboratory</h1>
-
+<%= render 'search/form' %>
+<br />
 
 <div id="posts">
   <% @posts.each do |post| %>
     <div class="box">
     <%= render post %>
     <p>
-      <%= button_to "Show this post", post, method: :get, type: :button, class: "button is-black" %>
+      <%= button_to "Show this post", post, method: :get, type: :button, class: "button is-small is-fullwidth" %>
     </p>
     </div>
   <% end %>
@@ -19,7 +19,7 @@
 <% if user_signed_in? %>
 <div class="column">
   <div class="content">
-  <%= button_to "New post", new_post_path, method: :get, type: :button, class: "button is-black" %>
+  <%= button_to "New post", new_post_path, method: :get, type: :button, class: "button is-small is-fullwidth" %>
   </div>
 </div>
 <% end %>

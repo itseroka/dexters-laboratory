@@ -1,18 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="box">
 <%= render @post %>
-
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
-
-  <%= button_to "Destroy this post", @post, method: :delete %>
 </div>
 
-<% @comments.each do |comment| %>
-  <p><%= comment.id %></p>
+<div class="buttons">
+  <%= button_to "Edit this post", edit_post_path(@post), method: :get, type: :button, class: "button is-small"%>
+  
+  <%= button_to "Back to posts", posts_path, method: :get, type: :button, class: "button is-small" %>
+
+  <%= button_to "Destroy this post", @post, method: :delete, type: :button, class: "button is-small"%>
+  </div>
+
+
+<div class="box">
+<i>Comments section</i>
+<div><% @comments.each do |comment| %>
+  <hr />
   <p><%= comment.author %></p>
   <p><%= comment.body %></p>
 <% end %>
+</div>
+</div>
 
 <%= render "comments/form", comment: @comment %>
