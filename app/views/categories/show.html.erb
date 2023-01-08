@@ -2,9 +2,14 @@
 
 <%= render @category %>
 
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+<br />
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
-</div>
+<div class="buttons">
+<%= button_to "Back to categories", categories_path, method: :get, type: :button, class: "button is-small" %>
+
+<% if user_session %>
+  <%= button_to "Edit this category", edit_category_path(@category), method: :get, type: :button, class: "button is-small"%>
+
+  <%= button_to "Destroy this category", @category, method: :delete, type: :button, class: "button is-small"%>
+  <% end %>
+  </div>

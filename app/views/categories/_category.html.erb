@@ -3,9 +3,10 @@
     <strong>Name:</strong>
     <%= category.name %>
   </p>
+
   <% category.posts.each do |post| %>
-    <p>
-      <%= post.title %> | <%= link_to "View Post", post %>
-    </p>
+    <div class="content">
+    <li><%= link_to post.title, post %></li>
+  </div>
   <% end %>
 </div>

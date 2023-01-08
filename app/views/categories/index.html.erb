@@ -1,17 +1,23 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="box">
 <h1>Categories</h1>
 
 <div id="categories">
   <% @categories.each do |category| %>
+    <hr />
     <%= render category %>
     <p>
-      <%= link_to "Show this category", category %>
+      <%= button_to "Show this category", category, method: :get, type: :button, class: "button is-small is-fullwidth" %>
     </p>
   <% end %>
+  <hr />
 </div>
-
-<%= link_to "New category", new_category_path %>
-
-<%= render "categories/list_category" %>
-
+</div>
+<% if user_signed_in? %>
+<div class="column">
+  <div class="content">
+<%= button_to "New category", new_category_path, method: :get, type: :button, class: "button is-small is-fullwidth" %>
+</div>
+</div>
+<% end %>
