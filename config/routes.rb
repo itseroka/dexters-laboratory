@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'contact#index'
   get 'jobs', to: 'jobs#index'
   get 'about', to: 'about#index'
+  get 'report', to: 'report#index'
   root :to => 'posts#index'
   resources :categories
   resources :posts do
