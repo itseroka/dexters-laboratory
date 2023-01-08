@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'search', to: 'search#index'
+  get 'contact', to: 'contact#index'
+  get 'jobs', to: 'jobs#index'
+  get 'about', to: 'about#index'
   root :to => 'posts#index'
   resources :categories
   resources :posts do
