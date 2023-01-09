@@ -2,7 +2,6 @@
 <%= notice %>
 
 <%= render 'search/form' %>
-<br />
 
 <div id="posts">
   <% @posts.each do |post| %>
@@ -19,7 +18,7 @@
 <% if user_signed_in? %>
 <div class="column">
   <div class="content">
-  <%= button_to "New post", new_post_path, method: :get, type: :button, class: "button is-small is-fullwidth" %>
+  <%= button_to "New post", new_post_path, method: :get, type: :button, class: "button is-large is-fullwidth" %>
   </div>
 </div>
 <% end %>

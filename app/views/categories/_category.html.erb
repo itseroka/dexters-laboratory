@@ -1,12 +1,13 @@
 <div id="<%= dom_id category %>">
   <p>
-    <strong>Name:</strong>
+  <h4 class="title is-4">
     <%= category.name %>
+    </h4>
   </p>
 
   <% category.posts.each do |post| %>
     <div class="content">
-    <li><%= link_to post.title, post %></li>
+    <h6 class="subtitle is-6"><li><%= link_to post.title, post %></li></h6>
   </div>
   <% end %>
 </div>
