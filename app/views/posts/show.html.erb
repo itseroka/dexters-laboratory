@@ -7,12 +7,12 @@
 
 <div class="buttons">
 
-  <%= button_to "Back to posts", posts_path, method: :get, type: :button, class: "button is-small" %>
+  <%= button_to "Back to posts", posts_path, method: :get, type: :button, class: "button" %>
 
 <% if user_session %>
-  <%= button_to "Edit this post", edit_post_path(@post), method: :get, type: :button, class: "button is-small"%>
+  <%= button_to "Edit this post", edit_post_path(@post), method: :get, type: :button, class: "button"%>
 
-  <%= button_to "Destroy this post", @post, method: :delete, type: :button, class: "button is-small"%>
+  <%= button_to "Destroy this post", @post, method: :delete, type: :button, class: "button"%>
   <% end %>
 
 </div>

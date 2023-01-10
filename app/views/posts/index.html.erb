@@ -7,18 +7,13 @@
   <% @posts.each do |post| %>
     <div class="box">
     <%= render post %>
-    <p>
-      <%= button_to "Show this post", post, method: :get, type: :button, class: "button is-small is-fullwidth" %>
-    </p>
+    <p><%= button_to "Show this post", post, method: :get, type: :button, class: "button is-fullwidth" %></p>
     </div>
   <% end %>
-</div>
-<br />
 
-<% if user_signed_in? %>
-<div class="column">
-  <div class="content">
-  <%= button_to "New post", new_post_path, method: :get, type: :button, class: "button is-large is-fullwidth" %>
-  </div>
+  <% if user_signed_in? %>
+  <p><%= button_to "New post", new_post_path, method: :get, type: :button, class: "button" %></p>
+ <% end %>
 </div>
-<% end %>
+
+<%= paginate @posts %>

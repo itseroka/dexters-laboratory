@@ -7,6 +7,7 @@ gem 'serviceworker-rails'
 gem 'ransack'
 gem 'bulma-rails', '~> 0.0.4.1'
 gem 'devise'
+gem 'kaminari'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"

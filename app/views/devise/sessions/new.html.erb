@@ -18,9 +18,13 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+<div>
+    <%= button_to "Log in", user_session, method: :get, type: :button, class: "button is-primary"%>
   </div>
+  
+
+
 <% end %>
 
 <%= render "devise/shared/links" %>
+
