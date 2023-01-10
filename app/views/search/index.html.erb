@@ -2,7 +2,7 @@
   <%= render 'search/form' %>
 <h1 class="text-center"><%= pluralize(@posts.count, "Result") %></h1>
 <div class="container">
-  <table class="table table-light table-striped">
+  <table class="table is-fullwidth">
     <thead>
       <tr>
         <th><%= sort_link(@query, :title, "Title", default_order: :asc) %></th>

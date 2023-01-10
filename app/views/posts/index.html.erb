@@ -1,9 +1,9 @@
 
-<%= notice %>
+<h1 style="color: red"><%= notice %></p>
 
-<%= render 'search/form' %>
+<%= render 'search/form' %><br />
 
-<div id="posts">
+
   <% @posts.each do |post| %>
     <div class="box">
     <%= render post %>
@@ -14,6 +14,6 @@
   <% if user_signed_in? %>
   <p><%= button_to "New post", new_post_path, method: :get, type: :button, class: "button" %></p>
  <% end %>
-</div>
+
 
 <%= paginate @posts %>

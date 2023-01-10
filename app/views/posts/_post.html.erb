@@ -1,13 +1,12 @@
 <div id="<%= dom_id post %>">
 
-  <p><h2 class="title is-2"><%= post.title %> </h2></p>
+  <p><h3 class="title is-3"><%= post.title %> </h3></p>
 <hr />
 <div class="buttons">
   <%= button_to post.category.name, post.category, method: :get, type: :button, class: "button" %> 
-  </div>
-  <hr />
-  <p class="subtitle is-2">
+</div>
+  <div class="has-text-centered">
     <%= post.body %>
-  </p>
+  </div>
   <hr />
 </div>
